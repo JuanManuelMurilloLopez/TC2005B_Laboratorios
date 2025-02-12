@@ -10,7 +10,57 @@
     <header>
         <h1>Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h1>
     </header>
-
+    <nav>
+        <button>Equipos</button>
+        <button>Pilotos</button>
+        <button onclick="window.location.href='campeonato.html'">Campeonato</button>
+    </nav>
+    <div id="ContainerF1">
+        <h1>Fórmula 1 - Temporada 2025</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSun7W0HOVf_wLA3sI88JETxblMpvUWVYuTmA&s" alt="">
+        <p>
+            El Campeonato Mundial de Fórmula 1 es la competición de automovilismo internacional más conocida. <br>
+            Dirigida por la Federación Internacional del Automóvil (FIA) y propiedad de Liberty Media. <br>
+            Para la temporada 2025 (temporada número 76) la integrán 10 escuderías con 2 pilotos principales cada una para competir en 24 carreras <br>
+            a lo largo del año con el fin de ganar los 2 campeonatos en juego; el Campeonato de Constructores y el Campeonato de Pilotos.
+        </p>
+        <div>
+            <h2>Escuderías</h2>
+            <li><a href="https://es.wikipedia.org/wiki/McLaren">McLaren Formula 1 Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Scuderia_Ferrari">Scuderia Ferrari HP</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Red_Bull_Racing">Oracle Red Bull Racing</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Mercedes-Benz_en_F%C3%B3rmula_1">Mercedes-AMG PETRONAS Formula One Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Aston_Martin_en_F%C3%B3rmula_1">Aston Martin Aramco Formula One Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Alpine_F1_Team">BWT Alpine F1 Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Haas_F1_Team">MoneyGram Haas F1 Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/RB_Formula_One_Team">Visa Cash App Racing Bulls Formula One Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Williams_Racing">Atlassian Williams Racing</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Sauber">Stake F1 Team Kick Sauber</a></li>
+        </div>
+        <div>
+            <h2>Pilotos</h2>
+            <li>Lando Norris</li>
+            <li>Oscar Piastri</li>
+            <li>Charles Leclerc</li>
+            <li>Lewis Hamilton</li>
+            <li>Max Verstappen</li>
+            <li>Liam Lawson</li>
+            <li>Andrea Kimi Antonelli</li>
+            <li>George Russell</li>
+            <li>Fernando Alonso</li>
+            <li>Lance Stroll</li>
+            <li>Jack Doohan</li>
+            <li>Piere Gastly</li>
+            <li>Esteban Ocon</li>
+            <li>Oliver Bearman</li>
+            <li>Isack Hadjar</li>
+            <li>Yuki Tsunoda</li>
+            <li>Alexander Albon</li>
+            <li>Carlos Sainz Jr.</li>
+            <li>Gabriel Bortoleto</li>
+            <li>Nico Hülkenberg</li>
+        </div>
+    </div>
     <div id="Cuestionario">
         <h2>Preguntas a responder</h2>
         <div class="Pregunta">
@@ -81,11 +131,11 @@
         </div>
         <div class="Pregunta">
             <h3>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</h3>
-            <h4>RESPUESTA</h4>
+            <h4>POST, ya que envía los datos cifrados al servidor</h4>
         </div>
         <div class="Pregunta">
             <h3>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h3>
-            <h4>RESPUESTA</h4>
+            <h4>GET</h4>
         </div>
         <div class="Pregunta">
             <h3>Un servidor web devuelve una respuesta con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h3>
@@ -131,15 +181,29 @@
         </div>
         <div class="Pregunta">
             <h3>¿Qué componentes de estructura y estilo tiene una tabla?</h3>
-            <h4>RESPUESTA</h4>
+            <li>Leyenda</li>
+            <li>Cabecera</li>
+            <li>Filas</li>
+            <li>Columnas</li>
+            <li>Grupos de columnas</li>
+            <li>Cuerpo</li>
+            <li>Pie</li>
+            [7]
         </div>
         <div class="Pregunta">
             <h3>¿Cuáles son los principales controles de una forma HTML5?</h3>
-            <h4>RESPUESTA</h4>
+            <li>Form</li>
+            <li>Fieldset</li>
+            <li>Legend</li>
+            <li>Textarea</li>
+            <li>Label</li>
+            <li>Button</li>
+            <li>Input</li>
+            [8]
         </div>
         <div class="Pregunta">
             <h3>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</h3>
-            <h4>RESPUESTA</h4>
+            <h4>Chrome tiene una compatibilidad con la mayoría de elementos HTML5 desde varias versiones anteriores</h4>
         </div>
         <div class="Pregunta">
             <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
@@ -171,7 +235,16 @@
         </div>
         <div class="Pregunta">
             <h3>¿Cuál es el ciclo de desarrollo de los sistemas de información?</h3>
-            <h4>RESPUESTA</h4>
+            <h4>
+                <ol>
+                    <li>Análisi de requerimientos</li>
+                    <li>Diseño</li>
+                    <li>Desarrollo</li>
+                    <li>Pruebas</li>
+                    <li>Implementación</li>
+                    <li>Mantenimiento</li>
+                </ol>
+            </h4>
         </div>
     </div>
 
@@ -201,6 +274,14 @@
         <li>
             Ciclo de vida de un sistema de información. Gestiopolis <br>
             <a href="https://www.gestiopolis.com/ciclo-de-vida-de-un-sistema-de-informacion/">https://www.gestiopolis.com/ciclo-de-vida-de-un-sistema-de-informacion/</a>
+        </li>
+        <li>
+            Tablas. McLibre <br>
+            <a href="https://www.mclibre.org/consultar/htmlcss/html/html-tablas.html#:~:text=Una%20tabla%20HTML%20(,%3E%20y%20).">https://www.mclibre.org/consultar/htmlcss/html/html-tablas.html#:~:text=Una%20tabla%20HTML%20(,%3E%20y%20).</a>
+        </li>
+        <li>
+            Controles de formulario originales. mdn web docs <br>
+            <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls">https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls</a>
         </li>
     </ol>
     
