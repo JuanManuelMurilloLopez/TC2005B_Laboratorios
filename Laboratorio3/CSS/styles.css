@@ -1,0 +1,49 @@
+header{
+    color: dodgerblue;
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px;
+    justify-content: center;
+}
+
+#ContainerF1{
+    border:solid 6em;
+    border-image: url('https://www.pngplay.com/wp-content/uploads/13/F1-Ferrari-Transparent-Free-PNG.png');
+    border-image-width: 5em;
+}
+
+.Pregunta{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration:none;
+    background-color:blanchedalmond;
+}
+
+#Referencias{
+    border-color:cyan;
+    border-style: double;
+}
+
+footer{
+    text-align: center;
+}
+
+body{
+    background-color:aliceblue;
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #555;
+    word-wrap: break-word;
+}
+
+h5{
+    margin-top: 2em;
+    padding-top: 1em;
+}

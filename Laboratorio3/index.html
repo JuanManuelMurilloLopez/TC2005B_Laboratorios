@@ -1,0 +1,322 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 3</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h1>
+    </header>
+    <nav>
+        <button>Equipos</button>
+        <button>Pilotos</button>
+        <button onclick="window.location.href='campeonato.html'">Campeonato</button>
+    </nav>
+    <div id="ContainerF1">
+        <h1>Fórmula 1 - Temporada 2025</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSun7W0HOVf_wLA3sI88JETxblMpvUWVYuTmA&s" alt="">
+        <p>
+            El Campeonato Mundial de Fórmula 1 es la competición de automovilismo internacional más conocida. <br>
+            Dirigida por la Federación Internacional del Automóvil (FIA) y propiedad de Liberty Media. <br>
+            Para la temporada 2025 (temporada número 76) la integrán 10 escuderías con 2 pilotos principales cada una para competir en 24 carreras <br>
+            a lo largo del año con el fin de ganar los 2 campeonatos en juego; el Campeonato de Constructores y el Campeonato de Pilotos.
+        </p>
+        <div>
+            <h2>Escuderías</h2>
+            <li><a href="https://es.wikipedia.org/wiki/McLaren">McLaren Formula 1 Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Scuderia_Ferrari">Scuderia Ferrari HP</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Red_Bull_Racing">Oracle Red Bull Racing</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Mercedes-Benz_en_F%C3%B3rmula_1">Mercedes-AMG PETRONAS Formula One Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Aston_Martin_en_F%C3%B3rmula_1">Aston Martin Aramco Formula One Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Alpine_F1_Team">BWT Alpine F1 Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Haas_F1_Team">MoneyGram Haas F1 Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/RB_Formula_One_Team">Visa Cash App Racing Bulls Formula One Team</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Williams_Racing">Atlassian Williams Racing</a></li>
+            <li><a href="https://es.wikipedia.org/wiki/Sauber">Stake F1 Team Kick Sauber</a></li>
+        </div>
+        <div>
+            <h2>Pilotos</h2>
+            <li>Lando Norris</li>
+            <li>Oscar Piastri</li>
+            <li>Charles Leclerc</li>
+            <li>Lewis Hamilton</li>
+            <li>Max Verstappen</li>
+            <li>Liam Lawson</li>
+            <li>Andrea Kimi Antonelli</li>
+            <li>George Russell</li>
+            <li>Fernando Alonso</li>
+            <li>Lance Stroll</li>
+            <li>Jack Doohan</li>
+            <li>Piere Gastly</li>
+            <li>Esteban Ocon</li>
+            <li>Oliver Bearman</li>
+            <li>Isack Hadjar</li>
+            <li>Yuki Tsunoda</li>
+            <li>Alexander Albon</li>
+            <li>Carlos Sainz Jr.</li>
+            <li>Gabriel Bortoleto</li>
+            <li>Nico Hülkenberg</li>
+        </div>
+    </div>
+    <div id="Cuestionario">
+        <h2>Preguntas a responder</h2>
+        <div class="Pregunta">
+            <h3>¿Cuál es la diferencia entre Internet y la World Wide Web?</h3>
+            <h4>El internet es la red compuesta de computadoras interconectadas, mientras que la World Wide Web es el conglomerado de las páginas disponibles para las computadoras de la red [1]</h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Cuáles son las partes de un URL?</h3>
+            <h4>
+                <ol>
+                    <li>
+                        <h5>Protocolo</h5>
+                    </li>
+                    <li>
+                        <h5>Subdominio</h5>
+                    </li>
+                    <li>
+                        <h5>Dominio</h5>
+                    </li>
+                    <li>
+                        <h5>TLD</h5>
+                    </li>
+                    <li>
+                        <h5>Subcarpeta</h5>
+                    </li>
+                    <li>
+                        <h5>Slug</h5>
+                    </li>
+                    <li>
+                        <h5>Parámetros</h5>
+                    </li>
+                </ol>
+            </h4>
+            <img src="https://static.semrush.com/blog/uploads/media/1c/61/1c6180e4294fd6f5f51be7067be9b2ef/ES-Parts-of-a-URL-2.webp" alt="" width="700">
+            [2]
+        </div>
+        <div class="Pregunta">
+            <h3>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</h3>
+            <h4>
+                <ol>
+                    <li>
+                        <h5>GET</h5>
+                        Utilizado para acceder a datos del servidor
+                    </li>
+                    <li>
+                        <h5>HEAD</h5>
+                        Utilizado para recuperar los encabezados
+                    </li>
+                    <li>
+                        <h5>POST</h5>
+                        Se utiliza para crear nuevos registros de datos
+                    </li>
+                    <li>
+                        <h5>PUT</h5>
+                        Se utiliza para actualizar información ya existente en el servidor
+                    </li>
+                    <li>
+                        <h5>PATCH</h5>
+                        Al igual que PUT se utiliza para actualizar información, pero con la funcionalidad para evitar sobreescritura de datos indeseada
+                    </li>
+                    <li>
+                        <h5>DELETE</h5>
+                        Utilizado para eliminar registros de la base de datos
+                    </li>
+                </ol>
+            </h4>
+            [3]
+        </div>
+        <div class="Pregunta">
+            <h3>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</h3>
+            <h4>POST, ya que envía los datos cifrados al servidor</h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h3>
+            <h4>GET</h4>
+        </div>
+        <div class="Pregunta">
+            <h3>Un servidor web devuelve una respuesta con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h3>
+            <h4>El código de respuesta 200 es OK, lo que significa que todo está corriendo de manera deseada y no hay ningún error</h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Es la responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró un error 404? ¿Por qué?</h3>
+            <h4>El código 404 significa No Encontrado, el desarrollador deberá verificar que el sitio esté corriendo de manera correcta en el servidor.
+            </h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró un error 500? ¿Por qué?</h3>
+            <h4>El código HTTP 500 refiere a un "Internal Server Error", esto ocurre cuando el servidor no puede procesar la solicitud, por lo que el desarrollador deberá verificar el estado del servidor</h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado? Menciona algunos elementos de HTML4 que en HTML5 estén desaprobados</h3>
+            <h4>Un atributo HTML que está depreciado quiere decir que ya no se recomienda su uso ya que posiblemente los navegadores ya no lo soporten proximamente <br>
+                Ejemplos de etiquetas depreciadas:
+                <li>dir</li>
+                <li>hgroup</li>
+                <li>menu</li>
+                <li>listing</li>
+                [4]
+            </h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Cuáles son las diferencias principales entre HTML4 y HTML5?</h3>
+            <h4>
+                <li>
+                    HTML5 tiene mayor compatibilidad con los navegadores a comparación de su predecesor 
+                </li>
+                <li>
+                    HTML5 cuenta con soporte multimedia incluyendo audio, video, animaciones, etc.
+                </li>
+                <li>
+                    Eliminación del estándar SGML
+                </li>
+                <li>
+                    HTML5 tiene un mejor rendimiento
+                </li>
+                [5]
+            </h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Qué componentes de estructura y estilo tiene una tabla?</h3>
+            <li>Leyenda</li>
+            <li>Cabecera</li>
+            <li>Filas</li>
+            <li>Columnas</li>
+            <li>Grupos de columnas</li>
+            <li>Cuerpo</li>
+            <li>Pie</li>
+            [7]
+        </div>
+        <div class="Pregunta">
+            <h3>¿Cuáles son los principales controles de una forma HTML5?</h3>
+            <li>Form</li>
+            <li>Fieldset</li>
+            <li>Legend</li>
+            <li>Textarea</li>
+            <li>Label</li>
+            <li>Button</li>
+            <li>Input</li>
+            [8]
+        </div>
+        <div class="Pregunta">
+            <h3>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</h3>
+            <h4>Chrome tiene una compatibilidad con la mayoría de elementos HTML5 desde varias versiones anteriores</h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
+            <h4>
+                <ol>
+                    <li>
+                        Planificación
+                    </li>
+                    <li>
+                        Análisis
+                    </li>
+                    <li>
+                        Diseño
+                    </li>
+                    <li>
+                        Implementación
+                    </li>
+                    <li>
+                        Pruebas
+                    </li>
+                    <li>
+                        Instalación o despliegue
+                    </li>
+                    <li>
+                        Uso y mantenimiento
+                    </li>
+                </ol>
+            </h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Cuál es el ciclo de desarrollo de los sistemas de información?</h3>
+            <h4>
+                <ol>
+                    <li>Análisi de requerimientos</li>
+                    <li>Diseño</li>
+                    <li>Desarrollo</li>
+                    <li>Pruebas</li>
+                    <li>Implementación</li>
+                    <li>Mantenimiento</li>
+                </ol>
+            </h4>
+        </div>
+        <!--Preguntas Laboratorio 3-->
+        <div class="Pregunta">
+            <h3>Como ingeniero de Software ¿Cuál es tu recomendación sobre el uso de !important en un CSS?</h3>
+            <h4>Debe tener un uso limitado y específico, ya que si se abusa puede hacer más difícil de mantener el <br>
+                código por cuestiones de legibilidad y de los niveles de los estilos</h4>
+        </div>
+        <div class="Pregunta">
+            <h3>Si se pone una imagen de fondo en una página HTML ¿Por qué debe de escogerse con cuidado?</h3>
+            <h4>Para evitar que el contenido de la página se pierda o sea difícil de leer por el contraste o la cantidad 
+                excesiva de elementos y colores de la imagen
+            </h4>
+        </div>
+        <div class="Pregunta">
+            <h3>Como ingeniero de software, ¿Cuál es tu recomendación al elegir las unidades de una propiedad de stilo entre %, px y pt?</h3>
+            <h4>Dependiendo el uso de la página web, si solo se va a ocupar en dispositivos del mismo tamaño de pantalla px o pt, mientras
+                que si se busca tener variedad de dispositivos % para que se ajusten los valores dependiendo del tamaño de la pantalla
+            </h4>
+        </div>
+        <div class="Pregunta">
+            <h3>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</h3>
+            <h4>Porque al no tener elementos adicionales que no aportan la sintaxis el compilador lo procesa más rápido</h4>
+        </div>
+    </div>
+
+    <div id="Referencias">
+        <h2>Referencias</h2>
+        <ol>
+            <li>¿
+                Cuál es la diferencia entre internet y la web? (y por qué muchos las confunden). BBC News Mundo. <br>
+                <a href="https://www.bbc.com/mundo/noticias-47538812https://www.bbc.com/mundo/noticias-47538812#:~:text=Internet%20es%20una%20inmensa%20red,para%20acceder%20a%20la%20web.">https://www.bbc.com/mundo/noticias-47538812https://www.bbc.com/mundo/noticias-47538812#:~:text=Internet%20es%20una%20inmensa%20red,para%20acceder%20a%20la%20web.</a>
+            </li>
+            <li>
+                ¿Qué es una URL? Significado, Estructura y Consejos de Optimización. Semrush Blog <br>
+                <a href="https://es.semrush.com/blog/que-es-una-url/">https://es.semrush.com/blog/que-es-una-url/</a>
+            </li>
+            <li>
+                What are HTTP methods?. Postman Blog <br>
+                <a href="https://blog.postman.com/what-are-http-methods/">https://blog.postman.com/what-are-http-methods/</a>
+            </li>
+            <li>
+                ¿Cuáles son las etiquetas obsoletas en HTML5?. Tokio School <br>
+                <a href="https://www.tokioschool.com/noticias/etiquetas-obsoletas-html5/">https://www.tokioschool.com/noticias/etiquetas-obsoletas-html5/</a>
+            </li>
+            <li>
+                HTML vs HTML5: Conoce las diferencias cruciales entre ellos. Kinsta <br>
+                <a href="https://kinsta.com/es/blog/html-vs-html5/#:~:text=A%20diferencia%20de%20las%20versiones,juegos%20o%20animaciones%20con%20%C3%A9l.">https://kinsta.com/es/blog/html-vs-html5/#:~:text=A%20diferencia%20de%20las%20versiones,juegos%20o%20animaciones%20con%20%C3%A9l.</a>
+            </li>
+            <li>
+                Ciclo de vida de un sistema de información. Gestiopolis <br>
+                <a href="https://www.gestiopolis.com/ciclo-de-vida-de-un-sistema-de-informacion/">https://www.gestiopolis.com/ciclo-de-vida-de-un-sistema-de-informacion/</a>
+            </li>
+            <li>
+                Tablas. McLibre <br>
+                <a href="https://www.mclibre.org/consultar/htmlcss/html/html-tablas.html#:~:text=Una%20tabla%20HTML%20(,%3E%20y%20).">https://www.mclibre.org/consultar/htmlcss/html/html-tablas.html#:~:text=Una%20tabla%20HTML%20(,%3E%20y%20).</a>
+            </li>
+            <li>
+                Controles de formulario originales. mdn web docs <br>
+                <a href="https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls">https://developer.mozilla.org/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls</a>
+            </li>
+        </ol>
+    </div>
+
+    
+    <footer>
+        <h3>Juan Manuel Murillo López</h3>
+        <h4>m +52 442 156 9563</h4>
+        <h4>Correo: a01712218@tec.mx</h4>
+        <h5>Editor HTML: <a href="https://code.visualstudio.com/">Visual Studio Code</a></h5>
+    </footer>
+
+</body>
+
+</html>
