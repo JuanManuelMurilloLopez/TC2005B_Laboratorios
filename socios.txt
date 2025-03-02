@@ -4,5 +4,23 @@
     "apellidos": "Murillo López",
     "correo": "a01712218@tec.mx",
     "fechaNacimiento": "2025-03-01"
+  },
+  {
+    "nombre": "Juan Manuel",
+    "apellidos": "Murillo López",
+    "correo": "a01712218@tec.mx",
+    "fechaNacimiento": "2025-03-01"
+  },
+  {
+    "nombre": "Juan Manuel",
+    "apellidos": "Murillo López",
+    "correo": "a01712218@tec.mx",
+    "fechaNacimiento": "2025-03-01"
+  },
+  {
+    "nombre": "Juan Manuel",
+    "apellidos": "Murillo López",
+    "correo": "a01712218@tec.mx",
+    "fechaNacimiento": "2025-03-01"
   }
 ]

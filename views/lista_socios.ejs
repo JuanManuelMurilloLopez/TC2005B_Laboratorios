@@ -1,0 +1,25 @@
+<%- include('includes/_header.ejs') %>
+
+<div class="columns">
+    <% for(let i = 0; i < socios.length; i++){ %>
+    <div class="column box">
+        <h3>
+            Socio # <%= (i + 1) %>
+        </h3>
+        <h3>
+            Nombre: <%= socios[i].nombre %>
+        </h3>
+        <h3>
+            Apellidos: <%= socios[i].apellidos %>
+        </h3>
+        <h3>
+            Correo: <% socios[i].correo %>
+        </h3>
+        <h3>
+            Fecha de nacimiento: <%= socios[i].fechaNacimiento %>
+        </h3>
+    </div>
+    <% } %>
+</div>
+
+<%- include('includes/_footer.ejs') %>

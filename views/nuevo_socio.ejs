@@ -1,0 +1,18 @@
+<%- include('includes/_header.ejs') %>
+
+<div>
+    <h2>Se un socio</h2>
+    <form action="/socios/suscribirse" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre"> <br>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" id="apellidos"> <br>
+        <label for="correo">Correo</label>
+        <input type="email" name="correo" id="correo"> <br>
+        <label for="fechaNacimiento">Fecha de nacimiento</label>
+        <input type="date" name="fechaNacimiento" id="fechaNacimiento"> <br>
+        <input type="submit" name="" id="suscribirse" value="Suscribirse"> <br>
+    </form>
+</div>
+
+<%- include('includes/_footer.ejs') %>
