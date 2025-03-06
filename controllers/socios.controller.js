@@ -9,7 +9,22 @@ exports.get_suscribirse = (request, response, next) => {
 exports.post_suscribirse = (request, response, next) => {
     console.log(request.body);
     const socio = new Socio(request.body);
-    socio.save();
+    socio.save()
+    .then( () => {
+        console.log(`Personaje ${socio.nombre} guardado`);
+    } )
+    .catch( (error) => {
+        console.log(error);
+    } );
+    Socio.fetch(request.params.id)
+    .then( ([rows, fieldData]) => {
+        response.render('lista_socios', {
+            socios: rows
+        });
+    } )
+    .catch( (error) => {
+        console.log(error);
+    } );
     console.log(Socio.fetchAll());
     sociosJson = JSON.stringify(socio, null, 2);
     fileSystem.writeFile('socios.txt', sociosJson, (err) => {
@@ -20,8 +35,17 @@ exports.post_suscribirse = (request, response, next) => {
         }
         console.log('Archivo guardado correctamente');
     });
-    response.render('lista_socios', {
-        socios: Socio.fetchAll(),
-    });
 };
+
+exports.get_lista = (request, response, next) => {
+    Personaje.fetch(request.params.id)
+    .then( ([rows, fieldData]) => {
+        response.render('lista_socios', {
+            socios: rows
+        });
+    } )
+    .catch( (error) => {
+        console.log(error);
+    } );
+}
 
