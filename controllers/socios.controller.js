@@ -25,6 +25,7 @@ exports.post_suscribirse = (request, response, next) => {
     .catch( (error) => {
         console.log(error);
     } );
+    esponse.setHeader('Set-Cookie', `ultimo_socio=${socio.nombre}`);
     console.log(Socio.fetchAll());
     sociosJson = JSON.stringify(socio, null, 2);
     fileSystem.writeFile('socios.txt', sociosJson, (err) => {
@@ -34,6 +35,7 @@ exports.post_suscribirse = (request, response, next) => {
             return;
         }
         console.log('Archivo guardado correctamente');
+        console.log(request.get('Cookie'));
     });
 };
 
