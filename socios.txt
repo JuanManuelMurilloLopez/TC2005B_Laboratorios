@@ -1,5 +1,5 @@
 {
-  "nombre": "dsad",
+  "nombre": "Juan Manuelsadsads",
   "apellidos": "Murillo López",
   "correo": "a01712218@tec.mx",
   "fechaNacimiento": "2025-03-06"
