@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de contraseñas</title>
+</head>
+<body>
+    <h1>Validador de Contraseñas</h1>
+    <form onsubmit="validatePassword(event)">
+        <label for="password">Ingresa tu contraseña:</label>
+        <input type="password" id="password"> <br>
+        <label for="confirmPassword">Vuelve a ingresar tu contraseña:</label>
+        <input type="password" id="confirmPassword"> <br>
+        <button type="submit">Validar</button> <br>
+        <p id="fontChange">Cambia fuente</p>
+        
+    </form>
+    <span id="content"></span>
+    <span id="content2"></span>
+    <div class="Questions">
+        <h1>Preguntas</h1>
+        <div>
+            <h2>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar datos al servidor?</h2>
+            <p>Ayuda al usuario a validar que la información que manda sea la correcta, mejorando la interacción</p>
+        </div>
+        <div>
+            <h2>¿Cómo puedes saltarte la seguridad de validaciones hechas con JS?</h2>
+            <p>Se puede modificar el código de JS o enviar datos directamente desde el servidor</p>
+        </div>
+        <div>
+            <h2>Si te puedes saltar la seguridad de las validaciones de JS, entonces ¿Por qué la primera pregunta dice que es buena práctica?</h2>
+            <p>Es una capa extra de validación, siempre es bueno tener más validaciones para así evitar distintos errores del usuario o acciones maliciosas</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("fontChange").addEventListener("mouseenter", function() {
+            document.body.style.fontFamily = 'Arial, sans-serif';
+        });
+        let intento = 0;
+        function validatePassword(event) {
+            event.preventDefault(); 
+
+            const password = document.getElementById('password').value;
+            const confirmPasswordField = document.getElementById('confirmPassword');
+            const confirmPassword = confirmPasswordField ? confirmPasswordField.value : '';
+            const content = document.getElementById('content');
+            const content2 = document.getElementById('content2');
+            if (intento == 5){
+                const hint = confirm("Quieres una pista?");
+                if(hint){
+                    const firstChar = password[0];
+                    alert('Tu contraseña inicia con: ' + firstChar);
+                }
+            }
+            if(intento > 5){
+                const hint = confirm("Quieres otra pista?");
+                if(hint){
+                    const notFirstChar = password.slice(1);
+                    alert('Tu contraseña termina con con: ' + notFirstChar);
+                }
+            }
+            if (password === '' || confirmPassword === '') {
+                content.innerHTML = "Vas a querer una contraseña más segura que eso";
+                alert("No te recomiendo tener una contraseña vacía");
+            } else if (password !== confirmPassword) {
+                content.innerHTML = `
+                    <label for="confirmPassword">Vuelve a ingresar tu contraseña:</label>
+                    <input type="password" id="confirmPassword"> <br>
+                    <button onclick="validatePassword(event)">Confirmar</button> <br>
+                `;
+                intento++;
+                content2.innerHTML= "Intento: " + intento;
+            } else {
+                content.innerHTML = "Coinciden!";
+            }
+        }
+    </script>
+</body>
+</html>
