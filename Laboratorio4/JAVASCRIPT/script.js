@@ -40,7 +40,7 @@ function average(matrix){
     let averages = [];
     for(let i = 0; i < matrix.length; i++){
         let sum = 0;
-        for(let j = 0; j < metrix[i].length; j++){
+        for(let j = 0; j < matrix[i].length; j++){
             sum+= matrix[i][j];
         }
         averages.push(sum/matrix[i].length);
@@ -58,6 +58,16 @@ function inverseNumber(num){
     return result; 
 }
 
+function twoSum(nums, target) {
+    for(let i = 0; i < nums.length; i++){
+        for(let j = 0; j < nums.length; j++){
+            if(nums[i] + nums[j] == target && i != j){
+                return [i, j];
+            }
+        }
+    }
+};
+
 let number = prompt("Introduce un número entero positivo:")
 document.write(createTable(number));
 
@@ -73,4 +83,14 @@ else{
     alert("Casi, pero no");
 }
 
-console.log()
+array1 = [2, 0, 5, -3, 0, 5, -2, -5];
+array2 = [-8, 5, 0, 0, -4, 7];
+
+console.log("Array 1:", array1);
+console.log("Array 2: ", array2);
+console.log("Counter Array 1: ", counter(array1));
+console.log("Counter Array 2: ", counter(array2));
+console.log("Average arrays: ", average([array1, array2]));
+console.log("Inverso de 12345: ", inverseNumber(12345));
+console.assert(JSON.stringify(twoSum(array1, 10)) === JSON.stringify([2, 5]), "Caso 1 -> Suma a 10 en array1");
+console.assert(JSON.stringify(twoSum(array1, -8)) === JSON.stringify([3, 7]), "Caso 1 -> Suma a -8 en array1");
