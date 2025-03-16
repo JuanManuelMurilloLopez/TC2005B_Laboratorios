@@ -3,6 +3,7 @@
 <div>
     <h2>Se un socio</h2>
     <form action="/socios/suscribirse" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
         <label for="nombre">Nombre</label>
         <input type="text" name="nombre" id="nombre"> <br>
         <label for="apellidos">Apellidos</label>
@@ -12,8 +13,8 @@
         <label for="contraseña">Contraseña</label> 
         <input type="text" name="contraseña" id="contraseña"> <br>
         <label for="fechaNacimiento">Fecha de nacimiento</label>
-        <input type="date" name="fechaNacimiento" id="fechaNacimiento"> <br>
-        <input type="submit" name="" id="suscribirse" value="Suscribirse"> <br>
+        <input type="date" name="fechaNacimiento" id="fechaNacimiento"> <br> <br>
+        <input class="button is-info" type="submit" name="" id="suscribirse" value="Suscribirse"> <br>
     </form>
 </div>
 

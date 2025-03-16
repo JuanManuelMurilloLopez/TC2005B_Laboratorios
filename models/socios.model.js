@@ -17,7 +17,7 @@ module.exports = class Socio {
 
         return bcrypt.hash(this.contraseña, 12)
         .then( (contraseña_cifrada) => {
-            return db.execute('INSERT INTO Socios(nombre, apellidos, correo, fechaNacimiento, contrasenia)  VALUES(?, ?, ?, ?, ?)', [this.nombre, this.apellidos, this.correo,  this.fechaNacimiento, contrase])
+            return db.execute('INSERT INTO Socios(nombre, apellidos, correo, fechaNacimiento, contrasenia)  VALUES(?, ?, ?, ?, ?)', [this.nombre, this.apellidos, this.correo,  this.fechaNacimiento, contraseña_cifrada])
         }).catch(
             (error) => {
                 console.log(error);
@@ -29,13 +29,13 @@ module.exports = class Socio {
         return db.execute('SELECT * FROM Socios');
     }
 
-    static fetchOne(nombre){
-        return db.execute('SELECT * FROM Socios WHERE nombre=?', [nombre]);
+    static fetchOne(correo){
+        return db.execute('SELECT * FROM Socios WHERE correo=?', [correo]);
     }
 
-    static fetch(nombre){
-        if(nombre){
-            return this.fetchOne(nombre);
+    static fetch(correo){
+        if(correo){
+            return this.fetchOne(correo);
         }
         else{
             return this.fetchAll();

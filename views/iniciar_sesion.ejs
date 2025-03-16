@@ -1,0 +1,19 @@
+<%- include('includes/_header.ejs') %>
+<nav>
+    <div class="grid">
+        <br>
+        <form action="/" method="GET">
+            <button class="cell button is-link is-outlined">Regresar</button>
+        </form>
+        <br>
+    </div>
+</nav>
+<form action="/iniciar_sesion" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
+    <label for="correo">Correo</label>
+    <input type="text" name="correo" id="correo"> <br>
+    <label for="contraseña">Contraseña</label>
+    <input type="text" name="contraseña" id="contraseña"> <br> <br>
+    <input class="button is-info" type="submit" name="" id="iniciarSesion" value="iniciarSesion"> <br>
+</form>
+<%- include('includes/_footer.ejs') %>

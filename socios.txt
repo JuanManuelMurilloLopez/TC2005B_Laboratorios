@@ -1,7 +1,7 @@
 {
   "nombre": "Juan Manuel",
   "apellidos": "Murillo López",
-  "correo": "Juanmanuel@vpn.mx",
-  "fechaNacimiento": "2025-03-05",
-  "contraseña": "saASAS"
+  "correo": "a01712218@tec.mx",
+  "fechaNacimiento": "2025-03-16",
+  "contraseña": "hola"
 }

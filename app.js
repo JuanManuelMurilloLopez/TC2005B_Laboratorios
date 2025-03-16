@@ -2,12 +2,20 @@ const express = require('express');
 const app = express();
 const session = require('express-session');
 
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
+
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 
+
+const csrf = require('csurf');
+const csrfProtection = csrf();
+app.use(csrf({ cookie: true }));
 
 app.use((request, response, next) => {
     console.log('Middleware');
