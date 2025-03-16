@@ -42,4 +42,16 @@ module.exports = class Socio {
         }
     }
 
+    static getPrivilegios(correo){
+        return db.execute(
+            `SELECT nombrePrivilegio
+            FROM socios s, roles r, privilegios p, roles_privilegios rp
+            WHERE p.IdPrivilegio = rp.IdPrivilegio
+            AND rp.IdRol = r.IdRol 
+            AND r.IdRol = s.IdRol
+            AND s.correo=?
+            `, [correo]
+        );
+    }
+
 }

@@ -23,8 +23,16 @@ exports.post_iniciar_sesion = (request, response, next) => {
                 if(iguales){
                     request.session.correo = rows[0].correo;
                     request.session.sesionIniciada = true;
-                    return request.session.save(err => {
-                        response.redirect('/jugadores');
+                    Socio.getPrivilegios(rows[0].correo).then(([privilegios, fieldData]) => {
+                        request.session.privilegios = [];
+                        for(let privilegio of privilegios) {
+                            request.session.privilegios.push(privilegio);
+                        }
+                        return request.session.save(err => {
+                            response.redirect('/');
+                        });
+                    }).catch((error) => {
+                        console.log(error);
                     });
                 }
                 else{
