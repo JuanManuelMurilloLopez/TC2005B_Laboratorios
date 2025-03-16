@@ -1,4 +1,3 @@
-const socios = [];
 
 const db = require('../util/database');
 
@@ -10,12 +9,12 @@ module.exports = class Socio {
         this.apellidos = obj.apellidos;
         this.correo = obj.correo;
         this.fechaNacimiento = obj.fechaNacimiento;
+        this.contraseña = obj.contraseña;
     }
 
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
-        return db.execute('INSERT INTO Socios(nombre, apellidos, correo, fechaNacimiento)  VALUES(?, ?, ?, ?)', [this.nombre, this.apellidos, this.correo,  this.fechaNacimiento])
-        
+        return db.execute('INSERT INTO Socios(nombre, apellidos, correo, fechaNacimiento, contrasenia)  VALUES(?, ?, ?, ?, ?)', [this.nombre, this.apellidos, this.correo,  this.fechaNacimiento, this.contraseña])
     }
 
     //Este método servirá para devolver los objetos del almacenamiento persistente.

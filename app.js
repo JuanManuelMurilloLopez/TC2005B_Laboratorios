@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const session = require('express-session');
+const bcrypt = require('bcryptjs');
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');

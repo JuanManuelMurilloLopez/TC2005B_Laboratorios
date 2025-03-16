@@ -25,7 +25,7 @@ exports.post_suscribirse = (request, response, next) => {
     .catch( (error) => {
         console.log(error);
     } );
-    esponse.setHeader('Set-Cookie', `ultimo_socio=${socio.nombre}`);
+    response.setHeader('Set-Cookie', `ultimo_socio=${socio.nombre}`);
     console.log(Socio.fetchAll());
     sociosJson = JSON.stringify(socio, null, 2);
     fileSystem.writeFile('socios.txt', sociosJson, (err) => {
@@ -40,7 +40,7 @@ exports.post_suscribirse = (request, response, next) => {
 };
 
 exports.get_lista = (request, response, next) => {
-    Personaje.fetch(request.params.id)
+    Socio.fetch(request.params.id)
     .then( ([rows, fieldData]) => {
         response.render('lista_socios', {
             socios: rows
