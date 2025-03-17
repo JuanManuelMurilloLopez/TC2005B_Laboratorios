@@ -2,11 +2,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="css.css">
     <title>Laboratorio4</title>
 </head>
 <body>
-    
+    <h1>Gestor de Tareas</h1>
+    <h4>Dale click a la tarea para marcarla como completada</h4>
+    <input type="text" id="taskInput" placeholder="Añade una tarea">
+    <button onclick="addTask()">Agregar</button>
+    <ul id="taskList"></ul>
+    <div id="tableContainer"></div>
+    <div>
+        <div>
+            <h3>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h3>
+            <p>
+                Semejanzas: algunos elementos de sintaxis
+                Diferencias: JS es interpretado, mientras Java es compilado, JS no es tipado mientras Java sí
+            </p>
+        </div>
+        <div>
+            <h3>Qué métodos tiene el objeto Date?</h3>
+            <p>
+                <ul>
+                    <li>Date.now()</li>
+                    <li>Date.parse()</li>
+                    <li>Date.UTC()</li>
+                    <li>Date.prototype.getFullYear()</li>
+                    <li>Date.prototype.toString()</li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <h3>¿Qué métodos tienen los arreglos?</h3>
+            <p>
+                <ul>
+                    <li>push()</li>
+                    <li>pop()</li>
+                    <li>filter()</li>
+                    <li>map()</li>
+                    <li>Búsqueda por índice</li>
+                </ul>
+            </p>
+        </div>
+        <div>
+            <h3>¿Cómo se declara una variable con alcance local dentro de una función?</h3>
+            <p>Utilizando la palabra reservada 'let'</p>
+        </div>
+        <div>
+            <h3>¿Qué implicaciones tiene usar variables globales dentro de funciones?</h3>
+            <p>
+                Dificulta el entendimiento del código ya que puede haber riesgo de reasignación de variables
+            </p>
+        </div>
+    </div>
     <script src="JAVASCRIPT/script.js"></script>
 </body>
+  
 </html>
