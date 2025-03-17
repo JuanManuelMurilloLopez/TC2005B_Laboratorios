@@ -58,18 +58,69 @@ function inverseNumber(num){
     return result; 
 }
 
-function twoSum(nums, target) {
-    for(let i = 0; i < nums.length; i++){
-        for(let j = 0; j < nums.length; j++){
-            if(nums[i] + nums[j] == target && i != j){
-                return [i, j];
-            }
-        }
+class TaskManager {
+    constructor() {
+      this.tasks = [];
     }
-};
 
-let number = prompt("Introduce un número entero positivo:")
-document.write(createTable(number));
+    addTask(task) {
+      this.tasks.push({
+        text: task,
+        completed: false 
+    });
+    }
+
+    completeTask(index) {
+      if (this.tasks[index]) {
+        this.tasks[index].completed = true;
+      }
+    }
+
+    getTasks() {
+      return this.tasks;
+    }
+  }
+
+  const taskManager = new TaskManager();
+
+  function addTask() {
+    const taskInput = document.getElementById('taskInput');
+    const taskText = taskInput.value.trim();
+    if (taskText) {
+      taskManager.addTask(taskText);
+      taskInput.value = '';
+      renderTasks();
+    }
+  }
+
+  function completeTask(index) {
+    taskManager.completeTask(index);
+    renderTasks();
+  }
+
+  function renderTasks() {
+    const taskList = document.getElementById('taskList');
+    taskList.innerHTML = '';
+    // Me ayudé de IA para poder desplegar correctamente las tareas en forma de lista
+    taskManager.getTasks().forEach((task, index) => {
+      const li = document.createElement('li');
+      li.textContent = task.text;
+      if (task.completed) {
+        li.classList.add('completed');
+      }
+      li.onclick = () => completeTask(index);
+      taskList.appendChild(li);
+    });
+  }
+
+function showTable(num) {
+const tableContainer = document.getElementById('tableContainer');
+tableContainer.innerHTML = createTable(num);
+}
+
+let number = prompt("Introduce un número entero positivo:");
+
+showTable(number);
 
 let randNum1 = Math.floor(Math.random() * 100);
 let randNum2 = Math.floor(Math.random() * 100);
@@ -92,5 +143,3 @@ console.log("Counter Array 1: ", counter(array1));
 console.log("Counter Array 2: ", counter(array2));
 console.log("Average arrays: ", average([array1, array2]));
 console.log("Inverso de 12345: ", inverseNumber(12345));
-console.assert(JSON.stringify(twoSum(array1, 10)) === JSON.stringify([2, 5]), "Caso 1 -> Suma a 10 en array1");
-console.assert(JSON.stringify(twoSum(array1, -8)) === JSON.stringify([3, 7]), "Caso 1 -> Suma a -8 en array1");
